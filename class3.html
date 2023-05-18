@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <title>Calculator</title><center>
+    <i style="font-size:50px;color: rgb(210, 134, 240);">Simple Calculator</i></center>
+    <script>
+        function cal()
+        {
+            var i,flag=0;
+            var a=document.getElementById('txt').value;
+            l=a.length;
+            for(i=0;i<l;i++)
+            {
+                if(a[i]=='+'||a[i]=='-'||a[i]=='*'||a[i]=='/')
+                {
+                flag=1;
+                break;
+                }
+            }
+            if(flag==0)
+            document.getElementById('txt').value="Invalid Expression";
+            else
+            {
+               var c="",b="";
+               for(var j=0;j<i;j++)
+                b=b+a[j];
+               b=parseFloat(b);
+               for(var j=i+1;j<l;j++)
+                c=c+a[j];
+               c=parseFloat(c);
+               if(a[i]=="+")
+                document.getElementById('txt').value=b+c;
+               else if(a[i]=="-")
+                document.getElementById('txt').value=b-c;
+               else if(a[i]=="*")
+                document.getElementById('txt').value=b*c;
+               else
+               document.getElementById('txt').value=b/c;
+            }
+        }
+    </script>
+</head>
+<body>
+    <table border="1" align="center" style="height:500px;width:400px;margin-top: 60px;">
+    <form>
+        <tr>
+            <td colspan="3" align="center" name="t3"><input type="text" style="height:100px;width:300px" id="txt" disabled/></td>
+            <td><input type="reset" value="Clear"style="height:100px;width:100px" onclick="document.getElementById('txt').innerHTML=''"/></td>
+        </tr>
+        <tr><td><input type="button" value="1" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='1'"></td>
+            <td><input type="button" value="2" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='2'"></td>
+            <td><input type="button" value="3" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='3'"></td>
+            <td><input type="button" value="+" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='+'"></td>
+        </tr>
+        <tr><td><input type="button" value="4" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='4'"></td>
+            <td><input type="button" value="5" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='5'"></td>
+            <td><input type="button" value="6" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='6'"></td>
+            <td><input type="button" value="-" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='-'"></td>
+        </tr>
+        <tr><td><input type="button" value="7" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='7'"></td>
+            <td><input type="button" value="8" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='8'"></td>
+            <td><input type="button" value="9" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='9'"></td>
+            <td><input type="button" value="*" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='*'"></td>
+        </tr>
+        <tr><td><input type="button" value="." style="height:100px;width:100px" onclick="document.getElementById('txt').value+='.'"></td>
+            <td><input type="button" value="0" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='0'"></td>
+            <td><input type="button" value="=" style="height:100px;width:100px" onclick="cal()"></td>
+            <td><input type="button" value="/" style="height:100px;width:100px" onclick="document.getElementById('txt').value+='/'"></td>
+        </tr>
+    </form>
+    </table>
+</body>
