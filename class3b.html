@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="class3b.css">
+
+    <script>
+        // Mouseover event handler
+function handleMouseOver() {
+  document.getElementById('target').style.backgroundColor = '#ff0000';
+}
+
+// Mouseout event handler
+function handleMouseOut() {
+  document.getElementById('target').style.backgroundColor="pink" ;
+}
+
+// Click event handler
+function handleClick() {
+  document.getElementById('target').style.backgroundColor="blue";
+}
+
+// Double click event handler
+function handleDoubleClick() {
+  document.getElementById('target').style.backgroundColor="violet";
+}
+
+
+    </script>
+</head>
+<body>
+    <div id="target" class="box" onmouseover="handleMouseOver()" onmouseout="handleMouseOut()" onclick="handleClick()" ondblclick="handleDoubleClick()" >Mouse Events!</div>
+
+</body>
+</html>
