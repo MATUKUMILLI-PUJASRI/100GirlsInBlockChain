@@ -5,3 +5,4 @@ Class3:A simple Calculator
 ->when clicked on the number it should display on the display and gets appended until there is a operator "=" After operator "=" is clicked it must ckear the text on display and get the answer printed.
 ->There must be clear to clear the display.
 with ui/ux.(filename:class3.html)
+Class 3b:Ajavascript code with ui/ux with all eventhandlers in it(filename:Class3b.html and Class3b.css)
